@@ -1,0 +1,24 @@
+<div align="center">
+  <button mat-raised-button color="primary" (click)="weatherFileInput.click()">Upload Vejr</button>
+  <input hidden type="file" #weatherFileInput (change)="weatherFileChanged($event)">
+</div>
+<div align="center" style="margin: 5px">
+  <label *ngIf='weatherFile != null'>{{weatherFile.name}}</label>
+</div>
+
+<div align="center" style="margin: 10px">
+  <button mat-raised-button color="primary" (click)="absenseFileInput.click()">Upload Fravær</button>
+  <input hidden type="file" #absenseFileInput (change)="absenseFileChanged($event)">
+</div>
+<div align="center" style="margin: 5px">
+  <label *ngIf='absenseFile != null'>{{absenseFile.name}}</label>
+</div>
+
+<div align="center">
+  <button mat-raised-button type="submit" (click)="uploadFile()">Submit</button>
+</div>
+
+<!-- <div align="center">
+  <button mat-raised-button type="button" (click)="test()">Test Connection</button>
+
+</div> -->
